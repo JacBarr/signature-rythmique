@@ -38,10 +38,10 @@ function updateValues() {
   
   let x, y;
 
-  if (Math.random() < 1/20) {
+  if (Math.random() < 1/30) {
     x = 21;
     y = 128;
-  } else if (Math.random() < 1/15) {
+  } else if (Math.random() < 1/20) {
     x = 4;
     y = 4;
   } else {
@@ -58,6 +58,7 @@ function updateValues() {
     buttonLocked = true;
     setTimeout(() => { showOverlay(overlay44); }, 3000);
     setTimeout(() => { buttonLocked = false; }, 4000);
+    setTimeout(() => { hideOverlay(overlay44); }, 9000);
   } else if (x === 21 && y === 128) {
     buttonLocked = true;
     overlayLocked = true;
@@ -69,6 +70,7 @@ function updateValues() {
     setTimeout(() => {
         buttonLocked = false;
         overlayLocked = false;
+        hideOverlay(overlay21128);
      }, 9000);
   }
 }
