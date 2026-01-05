@@ -38,7 +38,7 @@ function updateValues() {
   
   let x, y;
 
-  if (Math.random() < 1/50) {
+  if (Math.random() < 1/75) {
     x = 21;
     y = 128;
   } else if (Math.random() < 1/20) {
