@@ -37,11 +37,12 @@ function updateValues() {
   if (buttonLocked) return;
   
   let x, y;
+  let rand = Math.random();
 
-  if (Math.random() < 1/50) {
+  if (rand < 0.01) {
     x = 21;
     y = 128;
-  } else if (Math.random() < 1/20) {
+  } else if (rand < 0.04) {
     x = 4;
     y = 4;
   } else {
