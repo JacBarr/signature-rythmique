@@ -22,7 +22,7 @@ function showOverlay(overlay, fadeIn = true) {
 }
 
 function hideOverlay(overlay) {
-  overlay.style.transition = "opacity 0.5s ease";
+  overlay.style.transition = "opacity 1s ease";
   overlay.classList.remove("show");
 }
 
@@ -71,7 +71,7 @@ function updateValues() {
         buttonLocked = false;
         overlayLocked = false;
         hideOverlay(overlay21128);
-     }, 9000);
+     }, 10000);
   }
 }
 
