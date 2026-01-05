@@ -40,13 +40,13 @@ function updateValues() {
   let rand = Math.random();
 
   if (rand < 0.01) {
-    x = 21;
-    y = 128;
+    x = 0;
+    y = getRandomPowerOfTwo();
   } else if (rand < 0.04) {
     x = 4;
     y = 4;
   } else {
-    x = getRandomInt(0, 21);
+    x = getRandomInt(1, 21);
     y = getRandomPowerOfTwo();
   }
 
@@ -65,7 +65,7 @@ function updateValues() {
         overlayLocked = false;
     }, 7000);
     setTimeout(() => { hideOverlay(overlay44); }, 9000);
-  } else if (x === 21 && y === 128) {
+  } else if (x === 0) {
     buttonLocked = true;
     overlayLocked = true;
 
