@@ -38,7 +38,7 @@ function updateValues() {
   
   let x, y;
 
-  if (Math.random() < 1/30) {
+  if (Math.random() < 1/40) {
     x = 21;
     y = 128;
   } else if (Math.random() < 1/20) {
@@ -56,8 +56,13 @@ function updateValues() {
 
   if (x === 4 && y === 4) {
     buttonLocked = true;
+    overlayLocked = true;
+
     setTimeout(() => { showOverlay(overlay44); }, 3000);
-    setTimeout(() => { buttonLocked = false; }, 4000);
+    setTimeout(() => {
+        buttonLocked = false;
+        overlayLocked = false;
+    }, 7000);
     setTimeout(() => { hideOverlay(overlay44); }, 9000);
   } else if (x === 21 && y === 128) {
     buttonLocked = true;
@@ -79,5 +84,5 @@ updateValues();
 
 document.getElementById('more-btn').addEventListener('click', updateValues);
 
-overlay44.addEventListener("click", () => hideOverlay(overlay44));
+overlay44.addEventListener("click", () => { if (!overlayLocked) { hideOverlay(overlay44) } } );
 overlay21128.addEventListener("click", () => { if (!overlayLocked) { hideOverlay(overlay21128) } } );
