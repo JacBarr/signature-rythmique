@@ -39,7 +39,7 @@ function updateValues() {
   let x, y;
   let rand = Math.random();
 
-  if (rand < 0.01) {
+  if (rand < 0.04) {
     x = 0;
     y = getRandomPowerOfTwo();
   } else if (rand < 0.04) {
